@@ -30,7 +30,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-          
+
 
     steps:
     - uses: actions/checkout@v3
@@ -43,7 +43,6 @@ jobs:
     - name: Install migrate
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.2/migrate.linux-amd64.tar.gz | tar xvz
-        sudo mv migrate.linux-amd64 /usr/bin/migrate
         which migrate
 
     - name: Run migrations
